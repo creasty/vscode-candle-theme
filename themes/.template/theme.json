@@ -672,6 +672,7 @@
     }
   ],
   "colors": {
+    "foreground": "{{scheme.foreground}}",
     "focusBorder": "{{scheme.focusBorder}}00",
     "editorCursor.foreground": "{{scheme.caret}}",
     "editorRuler.foreground": "{{scheme.guides}}",
@@ -685,7 +686,6 @@
     "button.background": "{{scheme.selection}}",
     "debugToolBar.background": "{{scheme.background}}",
     "pickerGroup.foreground": "{{scheme.accent}}",
-
 
     "editorLineNumber.foreground": "{{scheme.lineNumbers}}",
     "editorLineNumber.activeForeground": "{{scheme.sidebarForeground}}",
