@@ -1,0 +1,27 @@
+{
+    "name": "vscode-candle-theme",
+    "displayName": "Candle Theme",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Candle Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/candle.json"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "node generate.js"
+    },
+    "dependencies": {
+        "mustache": "^3.0.1"
+    }
+}
