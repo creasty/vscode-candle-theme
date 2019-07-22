@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const mustache = require('mustache');
 const path = require('path');
 
@@ -12,14 +12,19 @@ const PATHS = {
 };
 
 const contents = {};
-['template', 'scheme', 'colors'].forEach(name => contents[name] = fs.readFileSync(PATHS[name], CHARSET));
+['template', 'scheme', 'colors'].forEach(name => contents[name] = fs.readFile(PATHS[name], CHARSET));
 
-const scheme = JSON.parse(contents.scheme);
+const scheme = contents.scheme.then(content => JSON.parse(content));
 
-const renderedColors = mustache.render(contents.colors, { scheme });
-const colors = JSON.parse(renderedColors);
+const colors = Promise.all([contents.colors, scheme])
+    .then(([colors, scheme]) => mustache.render(colors, { scheme }))
+    .then((rendered) => JSON.parse(rendered));
 
-const renderedTemplate = mustache.render(contents.template, { scheme, colors });
-const templateBeautified = JSON.stringify(JSON.parse(renderedTemplate), null, 2);
+const template = Promise.all([contents.template, scheme, colors])
+    .then(([template, scheme, colors]) => mustache.render(template, { scheme, colors }))
+    .then(rendered => JSON.stringify(JSON.parse(rendered), null, 2));
 
-fs.writeFileSync(PATHS.output, templateBeautified, { encoding: CHARSET });
+(async () => {
+    const output = await template;
+    await fs.writeFile(PATHS.output, output, { encoding: CHARSET });
+})();
