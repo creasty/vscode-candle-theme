@@ -6,14 +6,20 @@ const CHARSET = 'utf-8';
 
 const PATHS = {
     template: path.join(__dirname, 'themes/.template/theme.json'),
-    settings: path.join(__dirname, 'themes/.template/settings.json'),
+    scheme: path.join(__dirname, 'themes/.template/scheme.json'),
+    colors: path.join(__dirname, 'themes/.template/colors.json'),
     output: path.join(__dirname, 'themes/candle.json'),
 };
 
-const template = fs.readFileSync(PATHS.template, CHARSET);
-const settings = JSON.parse(fs.readFileSync(PATHS.settings, CHARSET));
+const contents = {};
+['template', 'scheme', 'colors'].forEach(name => contents[name] = fs.readFileSync(PATHS[name], CHARSET));
 
-const rendered = mustache.render(template, settings);
-const templateJSONStringified = JSON.stringify(JSON.parse(rendered), null, 2);
+const scheme = JSON.parse(contents.scheme);
 
-fs.writeFileSync(PATHS.output, templateJSONStringified, { encoding: CHARSET });
+const renderedColors = mustache.render(contents.colors, { scheme });
+const colors = JSON.parse(renderedColors);
+
+const renderedTemplate = mustache.render(contents.template, { scheme, colors });
+const templateBeautified = JSON.stringify(JSON.parse(renderedTemplate), null, 2);
+
+fs.writeFileSync(PATHS.output, templateBeautified, { encoding: CHARSET });
