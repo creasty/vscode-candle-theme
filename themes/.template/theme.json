@@ -103,7 +103,7 @@
         "keyword.other.substitution"
       ],
       "settings": {
-        "foreground": "{{scheme.cyan}}"
+        "foreground": "{{scheme.aqua}}"
       }
     },
     {
@@ -229,7 +229,7 @@
         "support.type"
       ],
       "settings": {
-        "foreground": "{{scheme.paleblue}}"
+        "foreground": "{{scheme.aqua}}"
       }
     },
     {
@@ -243,7 +243,7 @@
         "source.postcss support.type.property-name"
       ],
       "settings": {
-        "foreground": "{{scheme.paleblue}}"
+        "foreground": "{{scheme.aqua}}"
       }
     },
     {
@@ -348,7 +348,7 @@
         "string.regexp"
       ],
       "settings": {
-        "foreground": "{{scheme.cyan}}"
+        "foreground": "{{scheme.aqua}}"
       }
     },
     {
@@ -357,7 +357,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "{{scheme.cyan}}"
+        "foreground": "{{scheme.aqua}}"
       }
     },
     {
@@ -712,7 +712,7 @@
 
     "editor.background": "{{colors.background}}",
     "editor.foreground": "{{colors.foreground}}",
-    "editor.lineHighlightBackground": "{{colors.lineHighlight}}50",
+    "editor.lineHighlightBackground": "{{colors.lineHighlight}}",
     "editor.selectionBackground": "{{colors.selection}}",
     "editor.selectionHighlightBackground": "{{colors.caret}}20",
 
@@ -720,12 +720,14 @@
     "editor.findMatchHighlightBackground": "{{colors.findMatchHighlightBackground}}",
     "editor.findMatchBorder": "{{colors.findMatchBorder}}",
     "editor.findMatchHighlightBorder": "{{colors.findMatchHighlightBorder}}",
+    "editor.wordHighlightBackground": "{{colors.wordHighlightBackground}}",
+    "editor.wordHighlightStrongBackground": "{{colors.wordHighlightBackground}}",
 
     "tab.activeBorder": "{{colors.accent}}",
     "tab.activeModifiedBorder": "{{colors.sidebarForeground}}",
     "tab.unfocusedActiveBorder": "{{colors.comments}}",
     "tab.activeForeground": "{{colors.tabActiveForeground}}",
-    "tab.inactiveForeground": "{{colors.sidebarForeground}}",
+    "tab.inactiveForeground": "{{colors.tabInactiveForeground}}",
     "tab.inactiveBackground": "{{colors.background}}",
     "tab.unfocusedActiveForeground": "{{colors.foreground}}",
     "tab.border": "{{colors.background}}",
@@ -738,7 +740,7 @@
     "statusBar.debuggingForeground": "{{scheme.white}}",
 
     "statusBarItem.hoverBackground": "{{colors.comments}}20",
-    "statusBarItem.remoteForeground": "{{scheme.black}}",
+    "statusBarItem.remoteForeground": "{{scheme.gray700}}",
     "statusBarItem.remoteBackground": "{{colors.accent}}",
 
     "activityBar.background": "{{colors.backgroundAlt}}",
@@ -746,7 +748,7 @@
     "activityBar.foreground": "{{colors.foreground}}",
 
     "activityBarBadge.background": "{{colors.accent}}",
-    "activityBarBadge.foreground": "{{scheme.black}}",
+    "activityBarBadge.foreground": "{{scheme.gray700}}",
 
     "titleBar.activeBackground": "{{colors.backgroundAlt}}",
     "titleBar.activeForeground": "{{colors.foreground}}",
@@ -785,9 +787,9 @@
     "list.highlightForeground": "{{colors.accent}}",
 
     "terminal.ansiWhite": "{{scheme.white}}",
-    "terminal.ansiBlack": "{{scheme.black}}",
+    "terminal.ansiBlack": "{{scheme.gray700}}",
     "terminal.ansiBlue": "{{scheme.blue}}",
-    "terminal.ansiCyan": "{{scheme.cyan}}",
+    "terminal.ansiCyan": "{{scheme.aqua}}",
     "terminal.ansiGreen": "{{scheme.green}}",
     "terminal.ansiMagenta": "{{scheme.purple}}",
     "terminal.ansiRed": "{{scheme.red}}",
@@ -795,14 +797,14 @@
     "terminal.ansiBrightWhite": "{{scheme.white}}",
     "terminal.ansiBrightBlack": "{{colors.comments}}",
     "terminal.ansiBrightBlue": "{{scheme.blue}}",
-    "terminal.ansiBrightCyan": "{{scheme.cyan}}",
+    "terminal.ansiBrightCyan": "{{scheme.aqua}}",
     "terminal.ansiBrightGreen": "{{scheme.green}}",
     "terminal.ansiBrightMagenta": "{{scheme.purple}}",
     "terminal.ansiBrightRed": "{{scheme.red}}",
     "terminal.ansiBrightYellow": "{{scheme.yellow}}",
 
     "terminalCursor.foreground": "{{scheme.yellow}}",
-    "terminalCursor.background": "{{scheme.black}}",
+    "terminalCursor.background": "{{scheme.gray700}}",
 
     "scrollbarSlider.background": "{{colors.scrollbars}}",
     "scrollbarSlider.hoverBackground": "{{colors.scrollbarsHover}}",
@@ -811,7 +813,7 @@
     "editorSuggestWidget.background": "{{colors.background}}",
     "editorSuggestWidget.foreground": "{{colors.foreground}}",
     "editorSuggestWidget.highlightForeground": "{{colors.accent}}",
-    "editorSuggestWidget.selectedBackground": "{{colors.lineHighlight}}50",
+    "editorSuggestWidget.selectedBackground": "{{colors.lineHighlight}}",
     "editorSuggestWidget.border": "{{colors.inputBorder}}",
     "editorWidget.background": "{{colors.backgroundAlt}}",
     "editorWidget.resizeBorder": "{{colors.accent}}",
@@ -832,7 +834,7 @@
     "notifications.foreground": "{{colors.foreground}}",
     "notificationLink.foreground": "{{colors.accent}}",
 
-    "badge.background": "{{colors.lineHighlight}}30",
+    "badge.background": "{{colors.lineHighlight}}",
     "badge.foreground": "{{colors.comments}}",
 
     "extensionButton.prominentBackground": "{{scheme.green}}90",
@@ -863,7 +865,7 @@
 
     "menu.background": "{{colors.background}}",
     "menu.foreground": "{{colors.foreground}}",
-    "menu.selectionBackground": "{{colors.lineHighlight}}50",
+    "menu.selectionBackground": "{{colors.lineHighlight}}",
     "menu.selectionForeground": "{{colors.accent}}",
     "menu.selectionBorder": "{{colors.inactiveSelectionBackground}}",
     "menu.separatorBackground": "{{colors.foreground}}",
