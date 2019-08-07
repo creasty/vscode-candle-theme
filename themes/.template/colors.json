@@ -1,7 +1,6 @@
 {
   "accent": "{{scheme.accentAqua}}",
   "background": "{{scheme.gray600}}",
-  "backgroundAlt": "{{scheme.gray600}}",
   "caret": "{{scheme.gray100}}",
   "comments": "{{scheme.gray300}}",
   "contrastBorder": "{{scheme.gray600}}",
